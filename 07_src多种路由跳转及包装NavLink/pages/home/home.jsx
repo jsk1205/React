@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import HomeMessage from "../home_mesage/home_mesage"
 import HomeNews from '../home_news/home_news'
-import { NavLink,Route,Switch,Redirect } from 'react-router-dom'
+import { Route,Switch,Redirect } from 'react-router-dom'
+import MyNavLink from "../MyNavLink/MyNavLink";
+
 export default class Home extends Component {
   render() {
     return (
@@ -10,10 +12,12 @@ export default class Home extends Component {
         <div>
         <ul className="nav nav-tabs">
           <li>
-            <NavLink className="list-group-item" to="/home/news">News</NavLink>
+            <MyNavLink to="/home/news">News</MyNavLink>
+            {/* <NavLink activeClassName="demo" className="list-group-item" to="/home/news">News</NavLink> */}
           </li>
           <li>
-            <NavLink className="list-group-item" to="/home/message">Message</NavLink>
+            <MyNavLink to="/home/message">Message</MyNavLink>
+            {/* <NavLink activeClassName="demo" className="list-group-item" to="/home/message">Message</NavLink> */}
           </li>
         </ul>
           <Switch>
